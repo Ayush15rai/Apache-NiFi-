@@ -166,7 +166,7 @@ Currently, installing NiFi as a service is supported only for Linux and macOS us
 
 Once installed, the service can be started and stopped using the appropriate commands, such as sudo service nifi start and sudo service nifi stop. Additionally, the running status can be checked via sudo service nifi status.
 
-I Started NiFi. Now What?
+## I Started NiFi. Now What?
 The default installation generates a random username and password, writing the generated values to the application log. The application log is located in logs/nifi-app.log under the installation directory. The log file will contain lines with Generated Username [USERNAME] and Generated Password [PASSWORD] indicating the credentials needed for access. Search the application log for those lines and record the generated values in a secure location.
 
 The following command can be used to change the username and password:
@@ -185,22 +185,32 @@ Using the generated credentials, enter the generated username in the User field 
 
 # User Interface
 
-Apache is a web-based platform that can be accessed by a user using web UI. The NiFi UI
-is very interactive and provides a wide variety of information about NiFi. As shown in the
-image below, a user can access information about the following attributes:
+Apache is a web-based platform that can be accessed by a user using web UI. The NiFi UI is very interactive and provides a wide variety of information about NiFi. As shown in the image below, a user can access information about the following attributes:
 
  Active Threads
+
  Total queued data
+
  Transmitting Remote Process Groups
+
  Not Transmitting Remote Process Groups
+
  Running Components
+
  Stopped Components
+
  Invalid Components
+
  Disabled Components
+
  Up to date Versioned Process Groups
+
  Locally modified Versioned Process Groups
+
  Stale Versioned Process Groups
+
  Locally modified and Stale Versioned Process Groups
+
  Sync failure Versioned Process Groups
 
 # Components of Apache NiFi
@@ -281,52 +291,52 @@ GetFile process is used to fetch files of a specific format from a specific dire
 
 ![image](https://user-images.githubusercontent.com/94011475/161203633-136cda32-7868-4331-91cd-2ba518c33235.png)
 
-GetFile Settings
+#### GetFile Settings
 Following are the different settings of GetFile processor −
 
-Name
+#### Name
 In the Name setting, a user can define any name for the processors either according to the project or by that, which makes the name more meaningful.
 
-Enable
+#### Enable
 A user can enable or disable the processor using this setting.
 
-Penalty Duration
+#### Penalty Duration
 This setting lets a user to add the penalty time duration, in the event of flowfile failure.
 
-Yield Duration
+#### Yield Duration
 This setting is used to specify the yield time for processor. In this duration, the process is not scheduled again.
 
-Bulletin Level
+#### Bulletin Level
 This setting is used to specify the log level of that processor.
 
-Automatically Terminate Relationships
+#### Automatically Terminate Relationships
 This has a list of check of all the available relationship of that particular process. By checking the boxes, a user can program processor to terminate the flowfile on that event and do not send it further in the flow.
 
 ![image](https://user-images.githubusercontent.com/94011475/161203691-c9ccba5a-0b57-49a6-9e02-bf0e3e6e3c51.png)
 
-GetFile Scheduling
+#### GetFile Scheduling
 These are the following scheduling options offered by the GetFile processor −
 
-Schedule Strategy
+#### Schedule Strategy
 You can either schedule the process on time basis by selecting time driven or a specified CRON string by selecting a CRON driver option.
 
-Concurrent Tasks
+#### Concurrent Tasks
 This option is used to define the concurrent task schedule for this processor.
 
-Execution
+#### Execution
 A user can define whether to run the processor in all nodes or only in Primary node by using this option.
 
-Run Schedule
+#### Run Schedule
 It is used to define the time for time driven strategy or CRON expression for CRON driven strategy.
 
 ![image](https://user-images.githubusercontent.com/94011475/161203800-3a6395b6-9f00-44f1-950c-c787b877a07e.png)
 
-GetFile Properties
+#### GetFile Properties
 GetFile offers multiple properties as shown in the image below raging compulsory properties like Input directory and file filter to optional properties like Path Filter and Maximum file Size. A user can manage file fetching process using these properties.
 
 ![image](https://user-images.githubusercontent.com/94011475/161203867-a304c50f-b5f9-4337-b5d6-0a46c788e682.png)
 
-GetFile Comments
+#### GetFile Comments
 This Section is used to specify any information about processor.
 
 ![image](https://user-images.githubusercontent.com/94011475/161203901-e68000cf-a338-473d-9fe3-3986ed8c6148.png)
@@ -338,52 +348,52 @@ The PutFile processor is used to store the file from the data flow to a specific
 
 ![image](https://user-images.githubusercontent.com/94011475/161204134-0da503ec-3bc7-4508-ba16-af833a7b33f9.png)
 
-PutFile Settings
+#### PutFile Settings
 The PutFile processor has the following settings −
 
-Name
+#### Name
 In the Name setting, a user can define any name for the processors either according to the project or by that which makes the name more meaningful.
 
-Enable
+#### Enable
 A user can enable or disable the processor using this setting.
 
-Penalty Duration
+#### Penalty Duration
 This setting lets a user add the penalty time duration, in the event of flowfile failure.
 
-Yield Duration
+#### Yield Duration
 This setting is used to specify the yield time for processor. In this duration, the process does not get scheduled again.
 
-Bulletin Level
+#### Bulletin Level
 This setting is used to specify the log level of that processor.
 
-Automatically Terminate Relationships
+#### Automatically Terminate Relationships
 This settings has a list of check of all the available relationship of that particular process. By checking the boxes, user can program processor to terminate the flowfile on that event and do not send it further in the flow.
 
 ![image](https://user-images.githubusercontent.com/94011475/161204181-47263046-abe2-4b54-8923-157fcd7040b7.png)
 
-PutFile Scheduling
+#### PutFile Scheduling
 These are the following scheduling options offered by the PutFile processor −
 
-Schedule Strategy
+#### Schedule Strategy
 You can schedule the process on time basis either by selecting timer driven or a specified CRON string by selecting CRON driver option. There is also an Experimental strategy Event Driven, which will trigger the processor on a specific event.
 
-Concurrent Tasks
+#### Concurrent Tasks
 This option is used to define the concurrent task schedule for this processor.
 
-Execution
+#### Execution
 A user can define whether to run the processor in all nodes or only in primary node by using this option.
 
-Run Schedule
+#### Run Schedule
 It is used to define the time for timer driven strategy or CRON expression for CRON driven strategy.
 
 ![image](https://user-images.githubusercontent.com/94011475/161204230-86c2d74e-18ed-4910-9e9a-653309266e57.png)
 
-PutFile Properties
+#### PutFile Properties
 The PutFile processor provides properties like Directory to specify the output directory for the purpose of file transfer and others to manage the transfer as shown in the image below.
 
 ![image](https://user-images.githubusercontent.com/94011475/161204276-07e0aa7f-8ae8-48a6-a91d-af1d6abf5526.png)
 
-PutFile Comments
+#### PutFile Comments
 This Section is used to specify any information about processor.
 
 ![image](https://user-images.githubusercontent.com/94011475/161204327-83952654-9e0f-4690-b360-a3a7a93bac3f.png)
