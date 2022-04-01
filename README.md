@@ -87,19 +87,19 @@ Apache NiFi consist of a web server, flow controller and a processor, which runs
 Virtual Machine. It also has 3 repositories Flowfile Repository, Content Repository, and
 Provenance Repository.
 
-## Flowfile Repository
+### Flowfile Repository
 This repository stores the current state and attributes of every flowfile that goes through
 the data flows of apache NiFi. The default location of this repository is in the root directory
 of apache NiFi. The location of this repository can be changed by changing the property
 named "nifi.flowfile.repository.directory".
 
-## Content Repository
+### Content Repository
 This repository contains all the content present in all the flowfiles of NiFi. Its default
 directory is also in the root directory of NiFi and it can be changed using
 "org.apache.nifi.controller.repository.FileSystemRepository" property. This directory uses
 large space in disk so it is advisable to have enough space in the installation disk.
 
-## Provenance Repository
+### Provenance Repository
 The repository tracks and stores all the events of all the flowfiles that flow in NiFi. There
 are two provenance repositories – volatile provenance repository (in this repository all
 the provenance data get lost after restart) and persistent provenance repository. Its
@@ -107,6 +107,118 @@ default directory is also in the root directory of NiFi and it can be changed us
 “org.apache.nifi.provenance.PersistentProvenanceRepository” and
 “org.apache.nifi.provenance.VolatileProvenanceRepositor” property for the respective
 repositories.
+
+# Environment Setup
+
+Step 1: Install the current version of Java in your computer. Please set the JAVA_HOME
+in your machine
+
+Step 2: Download Apache NiFi from https://nifi.apache.org/download.html
+● For windows OS download ZIP file.
+● For UNIX OS download TAR file.
+● For docker images, go to the following link
+https://hub.docker.com/r/apache/nifi/.
+
+Step 3: The installation process for Apache NiFi is very easy. The process differs with the OS:
+
+● Windows OS: Unzip the zip package and the Apache NiFi is installed.
+● UNIX OS: Extract tar file in any location and the Logstash is installed.
+
+                     $tar –xvf nifi-1.6.0-bin.tar.gz
+                     
+Step 4: Open command prompt, go to the bin directory of NiFi. For example, C:\nifi1.7.1\bin, and execute run-nifi.bat file.
+
+                      C:\nifi-1.7.1\bin>run-nifi.bat
+
+Step 5: It will take a few minutes to get the NiFi UI up. A user can check nifi-app.log,
+once NiFi UI is up then, a user can enter http://localhost:8080/nifi/ to access UI.
+
+# Apache NiFi — User Interface
+
+Apache is a web-based platform that can be accessed by a user using web UI. The NiFi UI
+is very interactive and provides a wide variety of information about NiFi. As shown in the
+image below, a user can access information about the following attributes:
+
+ Active Threads
+ Total queued data
+ Transmitting Remote Process Groups
+ Not Transmitting Remote Process Groups
+ Running Components
+ Stopped Components
+ Invalid Components
+ Disabled Components
+ Up to date Versioned Process Groups
+ Locally modified Versioned Process Groups
+ Stale Versioned Process Groups
+ Locally modified and Stale Versioned Process Groups
+ Sync failure Versioned Process Groups
+
+# Components of Apache NiFi
+
+### Processors
+
+User can drag the process icon on the canvas and select the desired processor for the data flow in NiFi.
+
+![image](https://user-images.githubusercontent.com/94011475/161202661-1764a32f-3c75-4c4c-8703-a5ced96e19a9.png)
+
+![image](https://user-images.githubusercontent.com/94011475/161202551-3c8899d6-79d6-4fb8-a01e-b48984bc7cb1.png)
+
+### Input port
+
+Below icon is dragged to canvas to add the input port into any data flow. Input port is used to get data from the processor, which is not present in that process group.
+
+![image](https://user-images.githubusercontent.com/94011475/161202680-d2c0404e-f9ec-420e-a5ca-b27749693420.png)
+
+After dragging this icon, NiFi asks to enter the name of the Input port and then it is added to the NiFi canvas.
+
+![image](https://user-images.githubusercontent.com/94011475/161202716-b7a52540-477f-4398-abc2-3afddb5910c6.png)
+
+### Output port
+
+The below icon is dragged to canvas to add the output port into any data flow.
+The output port is used to transfer data to the processor, which is not present in that process group.
+
+![image](https://user-images.githubusercontent.com/94011475/161202823-25901259-9a3c-4737-829d-9a3608f2721c.png)
+
+After dragging this icon, NiFi asks to enter the name of the Output port and then it is added to the NiFi canvas.
+
+![image](https://user-images.githubusercontent.com/94011475/161202844-b037b37e-e4e9-413a-bba0-61bf3f3ac2d4.png)
+
+### Process Group
+
+A user uses below icon to add process group in the NiFi canvas.
+
+![image](https://user-images.githubusercontent.com/94011475/161202939-894c7a55-78b6-4f13-886c-07c1ffcaaa46.png)
+
+After dragging this icon, NiFi asks to enter the name of the Process Group and then it is added to the NiFi canvas.
+
+![image](https://user-images.githubusercontent.com/94011475/161202961-81586d43-25b3-493d-9781-37f9c40067a1.png)
+
+### Remote Process Group
+
+This is used to add Remote process group in NiFi canvas.
+
+![image](https://user-images.githubusercontent.com/94011475/161202992-42a0b241-3b04-4a35-83c0-3cf6022690f3.png)
+
+### Funnel
+
+Funnel is used to transfer the output of a processor to multiple processors. User can use the below icon to add the funnel in a NiFi data flow.
+
+![image](https://user-images.githubusercontent.com/94011475/161203022-dc35577b-a143-4136-89dc-50912efee974.png)
+
+### Template
+
+This icon is used to add a data flow template to NiFi canvas. This helps to reuse the data flow in the same or different NiFi instances.
+
+![image](https://user-images.githubusercontent.com/94011475/161203052-53dc28c6-651a-489a-9b75-946c44f13eee.png)
+
+After dragging, a user can select the templates already added in the NiFi.
+
+### Label
+
+These are used to add text on NiFi canvas about any component present in NiFi. It offers a range of colors used by a user to add aesthetic sense.
+
+![image](https://user-images.githubusercontent.com/94011475/161203087-c46e02bf-dcc2-4596-88d9-8b88dc2d2d46.png)
 
 
 
