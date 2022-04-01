@@ -397,3 +397,36 @@ The PutFile processor provides properties like Directory to specify the output d
 This Section is used to specify any information about processor.
 
 ![image](https://user-images.githubusercontent.com/94011475/161204327-83952654-9e0f-4690-b360-a3a7a93bac3f.png)
+
+# Processors Categorization
+
+#### Data Ingestion Processors
+The processors under Data Ingestion category are used to ingest data into the NiFi data flow. These are mainly the starting point of any data flow in apache NiFi. Some of the processors that belong to these categories are GetFile, GetHTTP, GetFTP, GetKAFKA, etc.
+
+#### Routing and Mediation Processors
+Routing and Mediation processors are used to route the flowfiles to different processors or data flows according to the information in attributes or content of those flowfiles. These processors are also responsible to control the NiFi data flows. Some of the processors that belong to this category are RouteOnAttribute, RouteOnContent, ControlRate, RouteText, etc.
+
+#### Database Access Processors
+The processors of this Database Access category are capable of selecting or inserting data or executing and preparing other SQL statements from database. These processors mainly use data connection pool controller setting of Apache NiFi. Some of the processors that belong to this category are ExecuteSQL, PutSQL, PutDatabaseRecord, ListDatabaseTables, etc.
+
+#### Attribute Extraction Processors
+Attribute Extraction Processors are responsible to extract, analyze, change flowfile attributes processing in the NiFi data flow. Some of the processors that belong to this category are UpdateAttribute, EvaluateJSONPath, ExtractText, AttributesToJSON, etc.
+
+#### System Interaction Processors
+System Interaction processors are used to run processes or commands in any operating system. These processors also run scripts in many languages to interact with a variety of systems. Some of the processors that belong to this category are ExecuteScript, ExecuteProcess, ExecuteGroovyScript, ExecuteStreamCommand, etc.
+
+#### Data Transformation Processors 
+Processors that belong to Data Transformation are capable of altering content of the flowfiles. These can be used to fully replace the data of a flowfile normally used when a user has to send flowfile as an HTTP body to invokeHTTP processor. Some of the processors that belong to this category are ReplaceText, JoltTransformJSON, etc.
+
+#### Sending Data Processors
+Sending Data Processors are generally the end processor in a data flow. These processors are responsible to store or send data to the destination server. After successful storing or sending the data, these processors DROP the flowfile with success relationship. Some of the processors that belong to this category are PutEmail, PutKafka, PutSFTP, PutFile, PutFTP, etc.
+
+#### Splitting and Aggregation Processors
+These processors are used to split and merge the content present in a flowfile. Some of the processors that belong to this category are PutEmail, PutKafka, PutSFTP, PutFile, PutFTP, etc.
+
+#### HTTP Processors
+These processors deal with the HTTP and HTTPS calls. Some of the processors that belong to this category are InvokeHTTP, PostHTTP, ListenHTTP, etc.
+
+#### AWS Processors
+AWS processors are responsible to interaction with Amazon web services system. Some of the processors that belong to this category are GetSQS, PutSNS, PutS3Object, FetchS3Object, etc.
+
