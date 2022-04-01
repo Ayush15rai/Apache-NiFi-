@@ -12,8 +12,6 @@ protocols making this platform popular in many IT organizations.
 
 # Apache NiFi-General Features
 
-The general features of Apache NiFi are as follows:
-
 ● Apache NiFi provides a web-based user interface, which provides seamless
 experience between design, control, feedback, and monitoring.
 
@@ -34,8 +32,6 @@ encryptions.
 for authorization.
 
 # Apache NiFi -Key Concepts
-
-The key concepts of Apache NiFi are as follows:
 
 ● Process Group: It is a group of NiFi flows, which helps a user to manage and keep
 flows in hierarchical manner.
@@ -84,3 +80,33 @@ unless admin manually copies flow.xml from the connected node.
 
 ● Apache NiFi have state persistence issue in case of primary node switch, which
 sometimes makes processors not able to fetch data from sourcing systems.
+
+# Basic Concepts
+
+Apache NiFi consist of a web server, flow controller and a processor, which runs on Java
+Virtual Machine. It also has 3 repositories Flowfile Repository, Content Repository, and
+Provenance Repository.
+
+## Flowfile Repository
+This repository stores the current state and attributes of every flowfile that goes through
+the data flows of apache NiFi. The default location of this repository is in the root directory
+of apache NiFi. The location of this repository can be changed by changing the property
+named "nifi.flowfile.repository.directory".
+
+## Content Repository
+This repository contains all the content present in all the flowfiles of NiFi. Its default
+directory is also in the root directory of NiFi and it can be changed using
+"org.apache.nifi.controller.repository.FileSystemRepository" property. This directory uses
+large space in disk so it is advisable to have enough space in the installation disk.
+
+## Provenance Repository
+The repository tracks and stores all the events of all the flowfiles that flow in NiFi. There
+are two provenance repositories – volatile provenance repository (in this repository all
+the provenance data get lost after restart) and persistent provenance repository. Its
+default directory is also in the root directory of NiFi and it can be changed using
+“org.apache.nifi.provenance.PersistentProvenanceRepository” and
+“org.apache.nifi.provenance.VolatileProvenanceRepositor” property for the respective
+repositories.
+
+
+
