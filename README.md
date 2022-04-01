@@ -131,9 +131,21 @@ For Windows users, navigate to the folder where NiFi was installed. Within this 
 This will launch NiFi and leave it running in the foreground. To shut down NiFi, select the window that was launched and hold the Ctrl key while pressing C.
 
 ### For Linux/macOS users
-For Linux and macOS users, use a Terminal window to navigate to the directory where NiFi was installed. To run NiFi in the foreground, run bin/nifi.sh run. This will leave the application running until the user presses Ctrl-C. At that time, it will initiate shutdown of the application.
+For Linux and macOS users, use a Terminal window to navigate to the directory where NiFi was installed. 
 
-To run NiFi in the background, instead run bin/nifi.sh start. This will initiate the application to begin running. To check the status and see if NiFi is currently running, execute the command 
+To run NiFi in the foreground, run 
+
+          bin/nifi.sh run
+
+This will leave the application running until the user presses Ctrl-C. At that time, it will initiate shutdown of the application.
+
+To run NiFi in the background, instead run 
+
+          bin/nifi.sh start. 
+
+This will initiate the application to begin running. 
+
+To check the status and see if NiFi is currently running, execute the command 
 
           bin/nifi.sh status
         
