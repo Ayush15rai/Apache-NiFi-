@@ -166,7 +166,7 @@ Currently, installing NiFi as a service is supported only for Linux and macOS us
 
 Once installed, the service can be started and stopped using the appropriate commands, such as sudo service nifi start and sudo service nifi stop. Additionally, the running status can be checked via sudo service nifi status.
 
-## I Started NiFi. Now What?
+## Started NiFi. Now What?
 The default installation generates a random username and password, writing the generated values to the application log. The application log is located in logs/nifi-app.log under the installation directory. The log file will contain lines with Generated Username [USERNAME] and Generated Password [PASSWORD] indicating the credentials needed for access. Search the application log for those lines and record the generated values in a secure location.
 
 The following command can be used to change the username and password:
