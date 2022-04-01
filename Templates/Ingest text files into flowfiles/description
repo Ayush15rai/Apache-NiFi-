@@ -1,4 +1,4 @@
-The process of data ingestion — preparing data for analysis — usually includes steps called 
+The process of data ingestion is — preparing data for analysis — usually includes steps called 
 
 extract (taking the data from its current location), 
 transform (cleansing and normalizing the data) and 
