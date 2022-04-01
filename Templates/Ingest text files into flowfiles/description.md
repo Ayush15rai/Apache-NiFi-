@@ -1,0 +1,7 @@
+The process of data ingestion — preparing data for analysis — usually includes steps called 
+
+extract (taking the data from its current location), 
+transform (cleansing and normalizing the data) and 
+load (placing the data in a database where it can be analyzed).
+
+# Through this NiFi template we can transport data from one or more sources to a target site for further processing and analysis.
